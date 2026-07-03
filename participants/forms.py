@@ -4,6 +4,11 @@ from .models import Participant
 
 class ParticipantForm(forms.ModelForm):
 
+    confirmation = forms.BooleanField(
+    required=True,
+    label="I confirm that the information provided above is accurate."
+)
+
     class Meta:
         model = Participant
         fields = [
