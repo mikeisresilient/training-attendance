@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block title %}
+Training Registration
+{% endblock %}
+
+{% block content %}
+
+<div class="card shadow-lg border-0">
+
+    <div class="card-header bg-primary text-white text-center">
+
+        <h2 class="mb-1">
+            VONMUE QUALISAFE CONSULTING LIMITED
+        </h2>
+
+        <h5>
+            Training Attendance Registration System
+        </h5>
+
+    </div>
+
+    <div class="card-body">
+
+        <h5 class="text-center mb-4">
+            Training for Quality Assurance Personnel<br>
+            <strong>Intercontinental Distillers Limited</strong>
+        </h5>
+
+        <p class="text-center text-muted">
+            Kindly complete the form below before the commencement of the training.
+        </p>
+
+        {% if form.errors %}
+            <div class="alert alert-danger">
+                Please correct the errors below.
+            </div>
+        {% endif %}
+
+        <form method="post">
+
+            {% csrf_token %}
+
+            <div class="mb-3">
+                <label class="form-label">Full Name</label>
+                {{ form.full_name }}
+                <div class="text-danger">{{ form.full_name.errors }}</div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Designation</label>
+                {{ form.designation }}
+                <div class="text-danger">{{ form.designation.errors }}</div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Department</label>
+                {{ form.department }}
+                <div class="text-danger">{{ form.department.errors }}</div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Phone Number</label>
+                {{ form.phone_number }}
+                <div class="text-danger">{{ form.phone_number.errors }}</div>
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label">Email Address</label>
+                {{ form.email }}
+                <div class="text-danger">{{ form.email.errors }}</div>
+            </div>
+
+            <button class="btn btn-primary btn-lg w-100">
+                Register Attendance
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

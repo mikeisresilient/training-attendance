@@ -1,0 +1,1 @@
+console.log("Training Attendance System Loaded");
