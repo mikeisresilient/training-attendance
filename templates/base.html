@@ -9,6 +9,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" href="{% static 'img/favicon.ico' %}">
 </head>
 
 <body>
@@ -19,7 +20,7 @@
 
         <div class="text-center">
 
-            <img src="{% static 'images/vqc_logo.png' %}"
+            <img src="{% static 'img/vqc_logo.png' %}"
                  alt="VQC Logo"
                  class="company-logo">
 
@@ -44,14 +45,28 @@
 
 </div>
 
-<footer class="bg-dark text-white text-center py-3">
+<!-- <footer class="bg-dark text-white text-center py-3">
 
     © 2026 VONMUE QUALISAFE CONSULTING LIMITED
 
-</footer>
+</footer> !-->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 <script src="{% static 'js/script.js' %}"></script>
+
+<footer class="text-center mt-5 py-4 border-top">
+
+    <small class="text-muted">
+
+        © {% now "Y" %} VONMUE QUALISAFE CONSULTING LIMITED
+
+        <br>
+
+        Training Attendance Management System
+
+    </small>
+
+</footer>
 
 </body>
 </html>

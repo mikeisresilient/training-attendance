@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Training Attendance Sheet</title>
+
+    <style>
+
+        body{
+            font-family:Arial,sans-serif;
+            margin:40px;
+        }
+
+        h2,h4{
+            text-align:center;
+            margin:5px;
+        }
+
+        table{
+
+            width:100%;
+            border-collapse:collapse;
+            margin-top:30px;
+
+        }
+
+        table,th,td{
+
+            border:1px solid black;
+
+        }
+
+        th,td{
+
+            padding:10px;
+            text-align:left;
+
+        }
+
+        th{
+
+            background:#f2f2f2;
+
+        }
+
+        @media print{
+
+            button{
+
+                display:none;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<button onclick="window.print()">
+
+    Print Attendance Sheet
+
+</button>
+
+<h2>
+
+    VONMUE QUALISAFE CONSULTING LIMITED
+
+</h2>
+
+<h4>
+
+    Training Attendance Register
+
+</h4>
+
+<h4>
+
+    Intercontinental Distillers Limited
+
+</h4>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>S/N</th>
+<th>Full Name</th>
+<th>Designation</th>
+<th>Department</th>
+<th>Signature</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+{% for participant in participants %}
+
+<tr>
+
+<td>{{ forloop.counter }}</td>
+
+<td>{{ participant.full_name }}</td>
+
+<td>{{ participant.designation }}</td>
+
+<td>{{ participant.department }}</td>
+
+<td style="width:180px;"></td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+<br><br>
+
+<p>
+
+<strong>Date:</strong>
+
+_____________________________________
+
+</p>
+
+<p>
+
+<strong>Facilitator's Signature:</strong>
+
+_____________________________________
+
+</p>
+
+</body>
+
+</html>

@@ -1,20 +1,53 @@
 {% extends "base.html" %}
+
 {% block title %}
 Registration Successful
 {% endblock %}
 
 {% block content %}
 
-<div class="alert alert-success shadow">
+<div class="text-center">
 
-    <h2>Registration Successful 🎉</h2>
+    <div class="display-1 text-success mb-3">
+        ✅
+    </div>
 
-    <p>
-        Thank you for registering for this training.
+    <h2 class="text-success">
+        Registration Successful!
+    </h2>
+
+    <h4 class="mt-4">
+
+        Thank you,
+
+        <strong>{{ participant.full_name }}</strong>
+
+    </h4>
+
+    <p class="lead">
+
+        Your registration has been received successfully.
+
     </p>
 
-    <a href="/" class="btn btn-success">
+    <hr>
+
+    <p>
+
+        We look forward to welcoming you to the
+
+        <strong>Quality Assurance Training</strong>
+
+        organized by
+
+        <strong>VONMUE QUALISAFE CONSULTING LIMITED.</strong>
+
+    </p>
+
+    <a href="{% url 'register' %}" class="btn btn-primary btn-lg mt-3">
+
         Register Another Participant
+
     </a>
 
 </div>

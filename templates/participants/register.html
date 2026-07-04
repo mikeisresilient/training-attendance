@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}
 Training Registration
@@ -10,7 +11,7 @@ Training Registration
 
     <div class="container text-center">
 
-        <img src="{% static 'images/vqc_logo.png' %}"
+        <img src="{% static 'img/vqc_logo.png' %}"
              class="hero-logo"
              alt="VQC Logo">
 
@@ -151,21 +152,6 @@ Training Registration
 
 </div>
 
-<div class="form-check mb-4">
-
-    {{ form.confirmation }}
-
-    <label class="form-check-label">
-
-        I confirm that the information provided is accurate.
-
-    </label>
-
-    <div class="text-danger">
-
-        {{ form.confirmation.errors }}
-
-    </div>
 
 </div>
 
